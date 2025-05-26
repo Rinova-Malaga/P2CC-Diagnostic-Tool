@@ -27,13 +27,17 @@
       <div class="introBox"> 
        
         <h3>What is this tool about?</h3>
-        <p>This tool is a questionnaire that allows you to self-assess your competences as a mentor supporting young people (age 16 to 29) into creative careers.  Completing the questionnaire will help you identify your competence level in specific mentoring topics and identify areas for further development.  The tool will map your results against the P2CC pathway and guide you to the learning resources that are most relevant for you.</p>
+        <p>This tool is a questionnaire that allows you to self-assess your competencies as a mentor supporting young people (aged 16 to 29) into creative careers.  Completing the questionnaire will help you identify your competence level in specific mentoring topics and identify areas for further development.  The tool will map your results and guide you to the learning resources that are most relevant for you.</p>
         <h3>How does it work?</h3>
-        <p>The questions below are split into 5 different sections. For each question, please indicate for the statement whether you agree and to what level you agree by clicking the appropriate button next to each statement. Once you are finished, click the show results button at the bottom.</p>
-        <p>You can use the <b>Skip Section</b> button to skip a section if it's not relevant to you. However, you must complete a <b>minimum of 3 sections</b> to get your results.</p>
+        <p>The questions below are split into five different sections. For each question, please indicate whether you agree and to what level you agree by clicking the appropriate button next to each statement. Please complete all sections, in order for the results to show. Once you are finished, click the show results button at the bottom.</p>
         <h3>What results does the tool produce?</h3>
-        <p>Once you have completed the questionnaire and clicked the show results button, you will be provided with a list of areas that we recommend you should focus on more, as well as a radar chart that maps your results against the P2CC Pathway. In this way you can self-assess your level of competence in the six P2CC mentoring topics and identify which P2CC learning resources are most relevant for you.</p>
-        <p>Please keep in mind that the results do not save automatically - to save the chart, right click on it and then choose to save it as an image. The results can only be seen by you, and are not saved or shared with anyone else.</p>
+        <p>Once you have completed the questionnaire and clicked the show results button, you’ll receive:</p>
+        <ul>
+          <li>a summary of areas to focus on for further development </li>
+          <li>a radar chart showing your level of competence in the five P2CC mentoring topics</li>
+          <li>signposting to the learning resources most relevant to you.</li>
+        </ul>
+        <p>Please remember that the results do not save automatically. To save the chart, full results summary, or the print the entire page, use the buttons at the bottom. Only you can see the results; they are not saved or shared with anyone else. </p>
       </div>
 
       <form id="quizForm" onsubmit="return calculateResults()">
@@ -43,50 +47,47 @@
           <div class="sectionContainer">
             <div class="sectionHead">
               <h3></h3>
-              <div class="skipButton" id="skipHide1">
-                  <button type="button" onclick="return showSection('secCont1','skipHide1')">Show Section</button>
-              </div>
             </div>
-            <div class="sectionContent hidden" id="secCont1">
-              <div class="questionContainer">
-              <h4 class="questionDesc">1. How much knowledge and experience do you have in supporting young people in developing their critical thinking and media literacy?</h4>
-                <p class="choiceLabel"><input type="radio" value="0" name="" /> I have extensive knowledge and experience, regularly integrating these skills into my mentoring.</p>
-                <p class="choiceLabel"><input type="radio" value="0.25" name="" /> I have solid knowledge and experience and apply these skills in many mentoring situations.</p>
-                <p class="choiceLabel"><input type="radio" value="0.5" name="" /> I have some knowledge and experience, but I would like to improve my approach.</p>
-                <p class="choiceLabel"><input type="radio" value="0.75" name="" /> I have limited knowledge and experience, but I am eager to learn more.</p>
-                <p class="choiceLabel"><input type="radio" value="1" name="" /> I have little to no knowledge or experience in this area.</p>
+            <div class="sectionContent" id="secCont1">
+            <div class="questionContainer" data-topic="delivering critical media training">
+              <h4 class="questionDesc">1. How much experience do you have helping young people think critically and understand media?</h4>
+                <p class="choiceLabel"><input type="radio" required value="0" name="s1q1" /> None</p>
+                <p class="choiceLabel"><input type="radio" required value="0.25" name="s1q1" /> A little</p>
+                <p class="choiceLabel"><input type="radio" required value="0.5" name="s1q1" /> Some</p>
+                <p class="choiceLabel"><input type="radio" required value="0.75" name="s1q1" /> Quite a lot</p>
+                <p class="choiceLabel"><input type="radio" required value="1" name="s1q1" /> Extensive</p>
             </div>
-            <div class="questionContainer">
-              <h4 class="questionDesc">2. How confident are you in your ability to assess the reliability and credibility of online information and in helping young people do the same?</h4>
-                <p class="choiceLabel"><input type="radio" value="0" name="" /> I am highly confident and can effectively teach others to verify sources and detect misinformation.</p>
-                <p class="choiceLabel"><input type="radio" value="0.25" name="" /> I am confident and regularly apply fact-checking strategies in my work.</p>
-                <p class="choiceLabel"><input type="radio" value="0.5" name="" /> I am confident, but I would like to refine my skills.</p>
-                <p class="choiceLabel"><input type="radio" value="0.75" name="" /> I am unsure and need more training in this area.</p>
-                <p class="choiceLabel"><input type="radio" value="1" name="" /> I am not confident and rarely engage in verifying online information.</p>
+            <div class="questionContainer" data-topic="verifying online information">
+              <h4 class="questionDesc">2. Are you checking if online information is trustworthy and teaching young people to do the same?</h4>
+                <p class="choiceLabel"><input type="radio" required value="0" name="s1q2" /> Not at all</p>
+                <p class="choiceLabel"><input type="radio" required value="0.25" name="s1q2" /> Occasionally</p>
+                <p class="choiceLabel"><input type="radio" required value="0.5" name="s1q2" /> Sometimes</p>
+                <p class="choiceLabel"><input type="radio" required value="0.75" name="s1q2" /> Often</p>
+                <p class="choiceLabel"><input type="radio" required value="1" name="s1q2" /> Always</p>
             </div>
-            <div class="questionContainer">
-              <h4 class="questionDesc">3. How effectively can you guide young people in recognizing and navigating misinformation in digital media?</h4>
-                <p class="choiceLabel"><input type="radio" value="0" name="" /> I can expertly guide young people with clear strategies and examples.</p>
-                <p class="choiceLabel"><input type="radio" value="0.25" name="" /> I can guide young people well, but I want to expand my resources.</p>
-                <p class="choiceLabel"><input type="radio" value="0.5" name="" /> I have some strategies but need more structured approaches.</p>
-                <p class="choiceLabel"><input type="radio" value="0.75" name="" /> I struggle to guide young people in this area.</p>
-                <p class="choiceLabel"><input type="radio" value="1" name="" /> I do not feel equipped to help young people navigate misinformation.</p>
+            <div class="questionContainer" data-topic="the impact of media on young people">
+              <h4 class="questionDesc">3. In your experience, do false or biased media messages affect young people’s critical thinking ability?</h4>
+                <p class="choiceLabel"><input type="radio" required value="0" name="s1q3" /> Not at all</p>
+                <p class="choiceLabel"><input type="radio" required value="0.25" name="s1q3" /> A little</p>
+                <p class="choiceLabel"><input type="radio" required value="0.5" name="s1q3" /> Somewhat</p>
+                <p class="choiceLabel"><input type="radio" required value="0.75" name="s1q3" /> Quite a lot</p>
+                <p class="choiceLabel"><input type="radio" required value="1" name="s1q3" /> Very much</p>
             </div>
-            <div class="questionContainer">
-              <h4 class="questionDesc">4. How well do you integrate critical thinking principles into ethical mentoring and education within the Creative and Cultural Industries (CCI)?</h4>
-                <p class="choiceLabel"><input type="radio" value="0" name="" /> I consistently apply critical thinking principles to ensure ethical, reflective mentoring.</p>
-                <p class="choiceLabel"><input type="radio" value="0.25" name="" /> I often integrate critical thinking but could improve in some areas.</p>
-                <p class="choiceLabel"><input type="radio" value="0.5" name="" /> I occasionally use critical thinking principles but not systematically.</p>
-                <p class="choiceLabel"><input type="radio" value="0.75" name="" /> I rarely explicitly incorporate critical thinking in mentoring.</p>
-                <p class="choiceLabel"><input type="radio" value="1" name="" /> I do not use critical thinking principles in my mentoring.</p>
+            <div class="questionContainer" data-topic="giving guidance on media messages ">
+              <h4 class="questionDesc">3. In your experience, do false or biased media messages affect young people’s critical thinking ability?</h4>
+                <p class="choiceLabel"><input type="radio" required value="0" name="s1q3" /> Not at all</p>
+                <p class="choiceLabel"><input type="radio" required value="0.25" name="s1q3" /> A little</p>
+                <p class="choiceLabel"><input type="radio" required value="0.5" name="s1q3" /> Somewhat</p>
+                <p class="choiceLabel"><input type="radio" required value="0.75" name="s1q3" /> Quite a lot</p>
+                <p class="choiceLabel"><input type="radio" required value="1" name="s1q3" /> Very much</p>
             </div>
-            <div class="questionContainer">
-              <h4 class="questionDesc">5. How confident are you in helping young creators use their talents to share positive messages in the media?</h4>
-                <p class="choiceLabel"><input type="radio" value="0" name="" /> I am highly confident and have supported young creators in impactful projects.</p>
-                <p class="choiceLabel"><input type="radio" value="0.25" name="" /> I am confident and have guided the sharing of meaningful media content.</p>
-                <p class="choiceLabel"><input type="radio" value="0.5" name="" /> I have some confidence but need more tools and strategies.</p>
-                <p class="choiceLabel"><input type="radio" value="0.75" name="" /> I am unsure how to help young creators use media positively.</p>
-                <p class="choiceLabel"><input type="radio" value="1" name="" /> I do not feel equipped to support young creators in this area.</p>
+            <div class="questionContainer" data-topic="helping young artists communicate media messages">
+              <h4 class="questionDesc">5. How confident are you in helping young artists create meaningful, socially aware messages through art and media?</h4>
+                <p class="choiceLabel"><input type="radio" required value="0" name="s1q5" /> Not confident</p>
+                <p class="choiceLabel"><input type="radio" required value="0.25" name="s1q5" /> Slightly confident</p>
+                <p class="choiceLabel"><input type="radio" required value="0.5" name="s1q5" /> Moderately confident</p>
+                <p class="choiceLabel"><input type="radio" required value="0.75" name="s1q5" /> Quite confident</p>
+                <p class="choiceLabel"><input type="radio" required value="1" name="s1q5" /> Very confident</p>
             </div>
           </div>
         </TNAsection>
@@ -94,50 +95,47 @@
           <div class="sectionContainer">
             <div class="sectionHead">
               <h3></h3>
-              <div class="skipButton" id="skipHide2">
-                  <button type="button" onclick="return showSection('secCont2','skipHide2')">Show Section</button>
-              </div>
             </div>
-            <div class="sectionContent hidden" id="secCont2">
-              <div class="questionContainer">
+            <div class="sectionContent" id="secCont2">
+              <div class="questionContainer" data-topic="live video mentoring">
                 <h4 class="questionDesc">1. One-to-one mentoring online using video/audio calls via the internet</h4>
-                  <p class="choiceLabel"><input type="radio" value="0" name="" /> No experience or skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /> Occasional experience and skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.5" name="" /> Some experience and skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /> Regular experience and good level of skills</p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /> Highly experienced and skilled</p>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s2q1" /> No experience or skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s2q1" /> Occasional experience and skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s2q1" /> Some experience and skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s2q1" /> Regular experience and good level of skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s2q1" /> Highly experienced and skilled</p>
               </div>
-              <div class="questionContainer">
+              <div class="questionContainer" data-topic="text-based mentoring">
                 <h4 class="questionDesc">2. One-to-one mentoring online via chat/email</h4>
-                  <p class="choiceLabel"><input type="radio" value="0" name="" /> No experience or skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /> Occasional experience and skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.5" name="" /> Some experience and skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /> Regular experience and good level of skills</p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /> Highly experienced and skilled</p>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s2q2" /> No experience or skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s2q2" /> Occasional experience and skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s2q2" /> Some experience and skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s2q2" /> Regular experience and good level of skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s2q2" /> Highly experienced and skilled</p>
               </div>
-              <div class="questionContainer">
+              <div class="questionContainer" data-topic="Online Group Workshops">
                 <h4 class="questionDesc">3. Group workshops/classes online</h4>
-                  <p class="choiceLabel"><input type="radio" value="0" name="" /> No experience or skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /> Occasional experience and skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.5" name="" /> Some experience and skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /> Regular experience and good level of skills</p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /> Highly experienced and skilled</p>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s2q3" /> No experience or skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s2q3" /> Occasional experience and skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s2q3" /> Some experience and skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s2q3" /> Regular experience and good level of skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s2q3" /> Highly experienced and skilled</p>
               </div>
-              <div class="questionContainer">
-                <h4 class="questionDesc">4. Producing online training content (eg: audio podcasts/video/social media)</h4>
-                  <p class="choiceLabel"><input type="radio" value="0" name="" /> No experience or skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /> Occasional experience and skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.5" name="" /> Some experience and skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /> Regular experience and good level of skills</p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /> Highly experienced and skilled</p>
+              <div class="questionContainer" data-topic="Digital Training Content">
+                <h4 class="questionDesc">4. Producing online training content (e.g., audio podcasts/video/social media)</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s2q4" /> No experience or skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s2q4" /> Occasional experience and skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s2q4" /> Some experience and skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s2q4" /> Regular experience and good level of skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s2q4" /> Highly experienced and skilled</p>
               </div>
-              <div class="questionContainer">
-                <h4 class="questionDesc">5. Use of online tools (eg: mentimeter/Miroboards)</h4>
-                  <p class="choiceLabel"><input type="radio" value="0" name="" /> No experience or skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /> Occasional experience and skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.5" name="" /> Some experience and skills</p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /> Regular experience and good level of skills</p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /> Highly experienced and skilled</p>
+              <div class="questionContainer" data-topic="Interactive Online Tools">
+                <h4 class="questionDesc">5. Use of online tools (e.g., Mentimeter, Miro boards)</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s2q5" /> No experience or skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s2q5" /> Occasional experience and skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s2q5" /> Some experience and skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s2q5" /> Regular experience and good level of skills</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s2q5" /> Highly experienced and skilled</p>
               </div>
             </div>
           </div>
@@ -146,50 +144,47 @@
           <div class="sectionContainer">
             <div class="sectionHead">
               <h3></h3>
-              <div class="skipButton" id="skipHide3">
-                  <button type="button" onclick="return showSection('secCont3','skipHide3')">Show Section</button>
-              </div>
             </div>
-            <div class="sectionContent hidden" id="secCont3">
-              <div class="questionContainer">
+            <div class="sectionContent" id="secCont3">
+              <div class="questionContainer" data-topic="understanding inclusion and equality concepts">
                 <h4 class="questionDesc">1. I feel confident in my understanding of inclusion and equality concepts and their importance in mentoring creative youth.</h4>
-                  <p class="choiceLabel"><input type="radio" value="0" name="" /> Strongly disagree</p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /> Partly disagree</p>
-                  <p class="choiceLabel"><input type="radio" value="0.5" name="" /> Not sure</p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /> Mostly agree</p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /> Fully agree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="vq1" /> Strongly disagree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s3q1" /> Partly disagree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s3q1" /> Not sure</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s3q1" /> Mostly agree</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s3q1" /> Fully agree</p>
               </div>
-              <div class="questionContainer">
+              <div class="questionContainer" data-topic="pursueing training on inclusion and equality">
                 <h4 class="questionDesc">2. I actively seek out opportunities and engage in training to update my knowledge and skills on best practices for fostering inclusion and equality.</h4>
-                  <p class="choiceLabel"><input type="radio" value="0" name="" /> Strongly disagree</p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /> Partly disagree</p>
-                  <p class="choiceLabel"><input type="radio" value="0.5" name="" /> Not sure</p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /> Mostly agree</p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /> Fully agree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s3q2" /> Strongly disagree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s3q2" /> Partly disagree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s3q2" /> Not sure</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s3q2" /> Mostly agree</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s3q2" /> Fully agree</p>
               </div>
-              <div class="questionContainer">
+              <div class="questionContainer" data-topic="tailoring mentoring to support diverse needs of creative youth">
                 <h4 class="questionDesc">3. I actively seek to make my mentoring approach inclusive, accessible, and equitable, and I tailor my support to meet the diverse needs of individuals from various backgrounds.</h4>
-                  <p class="choiceLabel"><input type="radio" value="0" name="" /> Strongly disagree</p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /> Partly disagree</p>
-                  <p class="choiceLabel"><input type="radio" value="0.5" name="" /> Not sure</p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /> Mostly agree</p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /> Fully agree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s3q3" /> Strongly disagree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s3q3" /> Partly disagree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s3q3" /> Not sure</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s3q3" /> Mostly agree</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s3q3" /> Fully agree</p>
               </div>
-              <div class="questionContainer">
+              <div class="questionContainer" data-topic="seeking feedback to improve inclusion practices">
                 <h4 class="questionDesc">4. I proactively seek feedback from my mentees and peers and engage in open dialogue about my and my organisation's approach to inclusion and equality, using this feedback to improve my practices.</h4>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /> Strongly disagree</p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /> Partly disagree</p>
-                  <p class="choiceLabel"><input type="radio" value="0.5" name="" /> Not sure</p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /> Mostly agree</p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /> Fully agree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s3q4" /> Strongly disagree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s3q4" /> Partly disagree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s3q4" /> Not sure</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s3q4" /> Mostly agree</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s3q4" /> Fully agree</p>
               </div>
-              <div class="questionContainer">
+              <div class="questionContainer" data-topic="guiding creative youth in incorporating inclusion and equality in their work">
                 <h4 class="questionDesc">5. I actively encourage and guide creative youth to incorporate principles of inclusion and equality into their work and messaging, and I support them in developing these perspectives.</h4>
-                  <p class="choiceLabel"><input type="radio" value="0" name="" /> Strongly disagree</p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /> Partly disagree</p>
-                  <p class="choiceLabel"><input type="radio" value="0.50" name="" /> Not sure</p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /> Mostly agree</p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /> Fully agree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s3q5" /> Strongly disagree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s3q5" /> Partly disagree</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s3q5" /> Not sure</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s3q5" /> Mostly agree</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s3q5" /> Fully agree</p>
               </div>
             </div>
           </div>
@@ -198,18 +193,47 @@
           <div class="sectionContainer">
             <div class="sectionHead">
               <h3></h3>
-              <div class="skipButton" id="skipHide4">
-                  <button type="button" onclick="return showSection('secCont4','skipHide4')">Show Section</button>
-              </div>
             </div>
-            <div class="sectionContent hidden" id="secCont4">
-              <div class="questionContainer">
-                <h4 class="questionDesc">1. </h4>
-                  <p class="choiceLabel"><input type="radio" value="0" name="" /></p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /></p>
-                  <p class="choiceLabel"><input type="radio" value="0.5" name="" /></p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /></p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /></p>
+            <div class="sectionContent" id="secCont4">
+              <div class="questionContainer" data-topic="supporting emotional and mental wellbeing">
+                <h4 class="questionDesc">1. To what extent does the artistic experience you offer young people contribute to their emotional and mental well-being?</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s4q1" /> Not at all</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s4q1" /> Slightly</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s4q1" /> Moderately</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s4q1" /> Quite a lot</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s4q1" /> Very much</p>
+              </div>
+              <div class="questionContainer" data-topic="implementing a safe, welcoming learning environment">
+                <h4 class="questionDesc">2. How effectively do you implement strategies or measures to create a safe and welcoming learning environment that encourages openness and emotional sharing?</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s4q2" /> Not effectively</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s4q2" /> Slightly effectively</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s4q2" /> Moderately effectively</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s4q2" /> Quite effectively</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s4q2" /> Very effectively</p>
+              </div>
+              <div class="questionContainer" data-topic="assisting young people experiencing distress">
+                <h4 class="questionDesc">3. When you notice signs of distress or mental health struggles in young people, how actively do you take steps to support them or help them access appropriate assistance?</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s4q3" /> Not at all</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s4q3" /> Rarely</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s4q3" /> Occasionally</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s4q3" /> Frequently</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s4q3" /> Very actively</p>
+              </div>
+              <div class="questionContainer" data-topic="using artistic tools to foster awareness of mental health">
+                <h4 class="questionDesc">4. How effective are the artistic tools or methodologies you use in raising awareness about mental health among young people and fostering open dialogue?</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s4q4" /> Not effective</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s4q4" /> Slightly effective</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s4q4" /> Moderately effective</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s4q4" /> Quite effective</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s4q4" /> Very effective</p>
+              </div>
+              <div class="questionContainer" data-topic="understanding your level of training and resources">
+                <h4 class="questionDesc">5. How much do you feel the need for additional resources or training to better address these challenges?</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s4q5" /> Not at all</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s4q5" /> A little</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s4q5" /> Somewhat</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s4q5" /> Quite a lot</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s4q5" /> Very much</p>
               </div>
             </div>
           </div>
@@ -218,18 +242,51 @@
           <div class="sectionContainer">
             <div class="sectionHead">
               <h3></h3>
-              <div class="skipButton" id="skipHide5">
-                  <button type="button" onclick="return showSection('secCont5','skipHide5')">Show Section</button>
-              </div>
             </div>
-            <div class="sectionContent hidden" id="secCont5">
-              <div class="questionContainer">
-                <h4 class="questionDesc">1. </h4>
-                  <p class="choiceLabel"><input type="radio" value="0" name="" /></p>
-                  <p class="choiceLabel"><input type="radio" value="0.25" name="" /></p>
-                  <p class="choiceLabel"><input type="radio" value="0.5" name="" /></p>
-                  <p class="choiceLabel"><input type="radio" value="0.75" name="" /></p>
-                  <p class="choiceLabel"><input type="radio" value="1" name="" /></p>
+            <div class="sectionContent" id="secCont5">
+              <div class="questionContainer" data-topic="empowerment through participatory arts">
+                <h4 class="questionDesc">1. How confident are you in your understanding of how participatory arts can empower young people and build their self-confidence?</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s5q1" /> Not at all</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s5q1" /> Basic understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s5q1" /> Moderate understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s5q1" /> Good understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s5q1" /> Expert level</p>
+              </div>
+
+              <div class="questionContainer" data-topic="supporting socially engaged arts">
+                <h4 class="questionDesc">2. How actively do you support young people in using art to explore social issues and express their views on community or global challenges?</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s5q2" /> Not at all</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s5q2" /> Basic understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s5q2" /> Moderate understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s5q2" /> Good understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s5q2" /> Expert level</p>
+              </div>
+
+              <div class="questionContainer" data-topic="social value of arts">
+                <h4 class="questionDesc">3. How effective do you feel your current practice is in helping young creatives understand the social value of their artistic work?</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s5q3" /> Not at all</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s5q3" /> Basic understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s5q3" /> Moderate understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s5q3" /> Good understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s5q3" /> Expert level</p>
+              </div>
+
+              <div class="questionContainer" data-topic="socially inclusive mentoring">
+                <h4 class="questionDesc">4. How often do you include socially relevant or inclusive themes when mentoring or guiding young artists?</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s5q4" /> Not at all</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s5q4" /> Basic understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s5q4" /> Moderate understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s5q4" /> Good understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s5q4" /> Expert level</p>
+              </div>
+
+              <div class="questionContainer" data-topic="level of resources to make a social impact">
+                <h4 class="questionDesc">5. How much do you feel the need for additional tools, resources, or training to better support socially impactful art-making with youth?</h4>
+                  <p class="choiceLabel"><input type="radio" required value="0" name="s5q5" /> Not at all</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.25" name="s5q5" /> Basic understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.5" name="s5q5" /> Moderate understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="0.75" name="s5q5" /> Good understanding</p>
+                  <p class="choiceLabel"><input type="radio" required value="1" name="s5q5" /> Expert level</p>
               </div>
             </div>
           </div>
@@ -241,15 +298,16 @@
         </div>
       </form>
           <!-- container for narrative box and chart -->
-    <div class="results" id="results"> 
-        <div class="narrativeBox" id="narrativeBox">
-        </div>
-
-      <div class="radarBox"> 
+    <div class="results" id="results">
+      <h2 id="ResultsTitle"></h2>
+      <div class="radarBox" id="radarBox"> 
         <canvas id="radarChart">
       </canvas>
       </div>
+      <div class="narrativeBox" id="narrativeBox">
+      </div>
     </div>
+
     <div class="resultsButtonSection" id="downloadButton">
     </div>
   </div>
@@ -275,8 +333,8 @@
             {
                 label: 'Scores',
                 data: [], // Data values
-                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Fill color
-                borderColor: 'rgba(75, 192, 192, 1)', // Line color
+                backgroundColor: 'rgba(240, 63, 109, 0.2)', // Fill color
+                borderColor: 'rgba(240, 63, 109, 1)', // Line color
                 borderWidth: 2,
             },
         ],
@@ -369,12 +427,89 @@
             },
         });
     }
+    function generateSummaries() {
+      const sections = document.querySelectorAll('TNAsection');
+      const narrativeBox = document.getElementById('narrativeBox');
+      narrativeBox.innerHTML = ''; // Clear previous content
+
+      sections.forEach((section, index) => {
+        const contentId = section.querySelector('.sectionContent')?.id;
+        const questions = document.querySelectorAll(`#${contentId} .questionContainer`);
+        const scores = {
+          high: [],
+          mid: [],
+          low: []
+        };
+        console.log(`Section ${index + 1} has ${questions.length} questions`);
+        questions.forEach(q => {
+          const topic = q.dataset.topic;
+          const selected = q.querySelector('input[type="radio"]:checked');
+          if (!selected) return;
+
+          const value = parseFloat(selected.value);
+          if (value === 1) {
+            scores.high.push(topic);
+          } else if (value >= 0.5) {
+            scores.mid.push(topic);
+          } else {
+            scores.low.push(topic);
+          }
+        });
+
+        const sectionTitle = moduleNames[index] || `Section ${index + 1}`;
+        const summary = document.createElement('div');
+        summary.classList.add('sectionSummary');
+
+        // Create heading
+        const heading = document.createElement('h4');
+        heading.textContent = sectionTitle;
+        summary.appendChild(heading);
+
+        // Create flex container
+        const flexWrapper = document.createElement('div');
+        flexWrapper.classList.add('confidenceWrapper');
+
+        if (scores.low.length > 0) {
+          const box = document.createElement('div');
+          box.className = 'confidenceBox low';
+          box.textContent = `Focus more on: ${scores.low.join('; ')}`;
+          flexWrapper.appendChild(box);
+        }
+
+        if (scores.mid.length > 0) {
+          const box = document.createElement('div');
+          box.className = 'confidenceBox mid';
+          box.textContent = `Somewhat confident with: ${scores.mid.join('; ')}`;
+          flexWrapper.appendChild(box);
+        }
+
+        if (scores.high.length > 0) {
+          const box = document.createElement('div');
+          box.className = 'confidenceBox high';
+          box.textContent = `Very confident with: ${scores.high.join('; ')}`;
+          flexWrapper.appendChild(box);
+        }
+
+        if (flexWrapper.children.length > 0) {
+          summary.appendChild(flexWrapper);
+        } else {
+          const fallback = document.createElement('p');
+          fallback.textContent = 'You did not answer any questions in this section.';
+          summary.appendChild(fallback);
+        }
+
+        narrativeBox.appendChild(summary);
+      });
+    }
+
 
     var form = document.getElementById("quizForm");
     function handleForm(event) { event.preventDefault(); } 
     form.addEventListener('submit', handleForm);
     
     function calculateResults() {
+    var resultsTitle = document.getElementById("ResultsTitle");
+    resultsTitle.innerHTML ="Your Results:"
 
         var score = 0;
 
@@ -466,14 +601,14 @@
         chartData.labels = sectionLabels;
         updateRadarChart();
 
-        var narrativeBox = document.getElementById("narrativeBox");
-        if (recommendationsList.length === 0){
-          narrativeBox.innerHTML = "<div class='resultsPara'><p>Well done! There are no specific areas which seem to need attention.<br><br>For more detailed results, see the chart below:</p></div>";
+        //var narrativeBox = document.getElementById("narrativeBox");
+        //if (recommendationsList.length === 0){
+        //  narrativeBox.innerHTML = "<div class='resultsPara'><p>Well done! There are no specific areas which seem to need attention.<br><br>For more detailed results, see the chart below:</p></div>";
 
-        } else {
-          narrativeBox.innerHTML = "<div class='resultsPara'><p> Based on your results from the quiz, we recommend you should pay particular attention to the following modules:<br><ul>" + recommendationsList + "</ul><br><br>For more detailed results, see the chart below:</p></div>";
-        }
-
+       // } else {
+         // narrativeBox.innerHTML = "<div class='resultsPara'><p> Based on your results from the quiz, we recommend you should pay particular attention to the following modules:<br><ul>" + recommendationsList + "</ul><br><br>For more detailed results, see the chart below:</p></div>";
+       // }
+        generateSummaries();
 
         window.scrollBy({
           left: 0, 
@@ -484,18 +619,18 @@
 
       function downloadFull(){
 
-        html2canvas(document.getElementById('mainBox')).then(function (canvas) {
+        html2canvas(document.getElementById('results')).then(function (canvas) {
           // Convert the image of the canvas to a blob
           canvas.toBlob(function (blob) {
             // Use FileSaver.js to download the blob as a PNG
-            saveAs(blob, "DISCO_SelfAssessement_Result_Full.png");
+            saveAs(blob, "P2CC_SelfAssessement_Result_Full.png");
           });
         });
       };
 
       function downloadChart() {
         // Captura el canvas y lo convierte en una imagen usando html2canvas / Capture the canvas and convert it to an image using html2canvas
-        html2canvas(document.getElementById('results')).then(function (canvas) {
+        html2canvas(document.getElementById('radarBox')).then(function (canvas) {
           // Convert the image of the canvas to a blob
           canvas.toBlob(function (blob) {
             // Use FileSaver.js to download the blob as a PNG
