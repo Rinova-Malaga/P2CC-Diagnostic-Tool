@@ -413,7 +413,7 @@
             type: 'radar',
             data: chartData,
             options: {
-                aspectRatio: 1.5,
+                aspectRatio: 1,
                 scales: {
                     r: {
                         pointLabels: {
@@ -514,7 +514,7 @@
 
         var score = 0;
 
-        function truncateStrings(arr, limit = 25) {
+        function truncate2Strings(arr, limit = 25) {
             return arr.map(str => {
                 const words = str.split(' ');
                 let currentLine = '';
@@ -533,7 +533,9 @@
             });
         }
 
-
+        function truncateStrings(arr) {
+            return arr.map(str => str.trim().split(/\s+/));
+        }
 
         var sectionLabels = truncateStrings(moduleNames);
 
